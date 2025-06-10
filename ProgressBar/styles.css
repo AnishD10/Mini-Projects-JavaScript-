@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.progress-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.progress-bg {
+  stroke: #e6e6e6;
+  stroke-width: 30;
+  fill: none;
+}
+
+.progress-bar {
+  stroke: green;
+  stroke-width: 30;
+  fill: none;
+  stroke-linecap: round;
+  stroke-dasharray: 942.4778; /* 2 * π * 150 */
+  stroke-dashoffset: 471.2389; /* 50% progress */
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 0.5s;
+}
+
+.progress-text {
+  position: absolute;
+  top: 46%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  pointer-events: none;
+}
